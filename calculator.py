@@ -11,19 +11,20 @@ from arithmetic import *
 while True:
 
     input_string = input(">")
-    tokens = input_string.split(" ")
 
-    num1 = float(tokens[1])
-    
-    if len(tokens) > 2:
-        num2 = float(tokens[2])
-
-    operand = tokens[0]
-
-    if operand == "q":
+    if input_string == "q":
         break
 
     else:
+
+        tokens = input_string.split(" ")
+
+        num1 = float(tokens[1])
+        
+        if len(tokens) > 2:
+            num2 = float(tokens[2])
+
+        operand = tokens[0]
 
         if operand == "+":
             print(add(num1, num2))
